@@ -19,8 +19,9 @@ zsh 是一个非常好用的 **shell** ，也是 **bash** 的替代品中比较�
 
 `brew install zsh` 或者 `pacman -S zsh` 等方法，然后使用选择器，将默认的 **shell** 设置为 **zsh** 。
 
-    :::shell
-    chsh -s `which zsh`
+```shell
+chsh -s `which zsh`
+```
 
 
 ## iTerm2 

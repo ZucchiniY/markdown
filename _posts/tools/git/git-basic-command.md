@@ -264,32 +264,33 @@ $ git archive
 
 -   储藏暂存内容
 
-        :::shell
-        # 想要切换分支，但是还不想要提交之前的工作，可以储存修改信息，将新的储藏推送到栈上
-        $ git stash / git stash save
-        # 在这时，能够轻易的切换分支并在其他地方工作，你的修改被存储在栈上。要查看储藏的东西，可以使用 git stash list
-        $ git stash list
-        # 可以将刚刚的储藏重新加载回来
-        $ git stash apply
-        # 也可以通过储藏的序号进行加载
-        $ git stash apply stash@{1}
-
+```shell
+# 想要切换分支，但是还不想要提交之前的工作，可以储存修改信息，将新的储藏推送到栈上
+$ git stash / git stash save
+# 在这时，能够轻易的切换分支并在其他地方工作，你的修改被存储在栈上。要查看储藏的东西，可以使用 git stash list
+$ git stash list
+# 可以将刚刚的储藏重新加载回来
+$ git stash apply
+# 也可以通过储藏的序号进行加载
+$ git stash apply stash@{1}
+```
 
 -   核武器级选项 filter-branch
 
-        :::shell
-        # 从每一个提交移除一个文件：指 git add . 的内容完整的上传到仓库，但是当希望开源这个内容的时候，需要移除一些无用的文件，--tre-filter 选项在的每一个提交后，运行指定的命令，然后重新提交结果。
-        $ git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
-        # 使一个子目录作为新的根目录：假设已经从另一个源代码控制系统中导入，并且有几个没意义的子目录（trunk/tags 等等）。如果想要让 trunk 子目录作为每一个提交的新的项目根目录，filter-branch 也可以帮助你那么做，再在新项目根目录是 trunk 子目录且 Git 会自动移除所有不影响子目录的提交。
-        $ git filter-branch --subdirectory-filter trunk HEAD
-        # 在开始工作时忘记运行 git config 来设置你的名字与邮箱地址，或者你想要开源一个项目，并且修改所有你的工作邮箱地址为你的个人邮箱地址。任何情形下，你也可以通过 filter-branch 来一次性修改多个提交中的邮箱地址。需要小心的是只修改你自己的邮箱地址，所以使用 --commit-filter 来修改：
-        $ git filter-branch --commit-filter '
-            if [ "$GIT_AUTHOR_EMAIL" = "schacon@localhost" ];
-            then
-                GIT_AUTHOR_NAME = "scott Chacon";
-                GIT_AUTHOR_EMAIL = "schacon@example.com";
-                git commit-tree "$@";
-            else
-                git commit-tree "$@";
-            fi' HEAD
+```sh
+# 从每一个提交移除一个文件：指 git add . 的内容完整的上传到仓库，但是当希望开源这个内容的时候，需要移除一些无用的文件，--tre-filter 选项在的每一个提交后，运行指定的命令，然后重新提交结果。
+$ git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
+# 使一个子目录作为新的根目录：假设已经从另一个源代码控制系统中导入，并且有几个没意义的子目录（trunk/tags 等等）。如果想要让 trunk 子目录作为每一个提交的新的项目根目录，filter-branch 也可以帮助你那么做，再在新项目根目录是 trunk 子目录且 Git 会自动移除所有不影响子目录的提交。
+$ git filter-branch --subdirectory-filter trunk HEAD
+# 在开始工作时忘记运行 git config 来设置你的名字与邮箱地址，或者你想要开源一个项目，并且修改所有你的工作邮箱地址为你的个人邮箱地址。任何情形下，你也可以通过 filter-branch 来一次性修改多个提交中的邮箱地址。需要小心的是只修改你自己的邮箱地址，所以使用 --commit-filter 来修改：
+$ git filter-branch --commit-filter '
+    if [ "$GIT_AUTHOR_EMAIL" = "schacon@localhost" ];
+    then
+        GIT_AUTHOR_NAME = "scott Chacon";
+        GIT_AUTHOR_EMAIL = "schacon@example.com";
+        git commit-tree "$@";
+    else
+        git commit-tree "$@";
+    fi' HEAD
+```
 

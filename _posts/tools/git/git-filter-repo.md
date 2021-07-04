@@ -1,32 +1,18 @@
 ---
 title: 清理 Git 项目的大小
-seo_title: git-filter-repo
-toc: true
-indent: true
-comments: true
-archive: true
-cover: false
-mathjax: false
-pin: false
-top_meta: false
-bottom_meta: false
-sidebar:
-  - toc
-icons:
-  - fas fa-fire red
-  - fas fa-star green
-date: 2021-07-03 21:04:41
-updated: 2021-07-03 21:04:41
 tags:
   - git
   - git-filter-repo
 categories:
   - 工具环境
   - Git
-keywords: 
+keywords:
   - Git
   - filter-repo
 description: 通过删除 git 项目中不再跟踪的文件记录来缩减 git 项目的大小。
+abbrlink: 5ea56af6
+date: 2021-07-03 21:04:41
+updated: 2021-07-03 21:04:41
 ---
 
 ## 起因

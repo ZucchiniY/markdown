@@ -112,7 +112,7 @@ brew update
 **bottles** 镜像则需要配置到环境变量中，我使用的是 zsh shell 所以配置到 **.zprofile** 文件中
 
 ```shell
-echo `export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles` >> ~/.zprofile 
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles' >> ~/.zprofile 
 source ~/.zprofile 
 ```
 

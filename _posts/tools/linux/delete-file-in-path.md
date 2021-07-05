@@ -35,7 +35,7 @@ find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
 然后将 *.DS_Store* 加入到 *.gitignore* 中。
 
 ```sh
-echo .DS_Store >> ~/.gitignore
+echo .DS_Store >> ./.gitignore
 ```
 
 最后再把删除后的版本库提交到远程就可以了。

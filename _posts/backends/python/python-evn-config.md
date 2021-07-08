@@ -1,13 +1,14 @@
 ---
-title: Python 基础配置
+title: 使用 Conda 管理 Python 环境
 tags:
   - conda
 categories:
   - 后台技术
   - Python
-description: 国内镜像和中文乱码解决。
+description: 如何使用 conda 管理包和开发环境，以及国内镜像和中文乱码解决。
 abbrlink: '22347697'
 date: 2019-07-26 08:18:00
+updated: 2021-07-08 09:10:48
 ---
 
 
@@ -50,6 +51,40 @@ conda update anaconda #更新 anaconda
 conda update python #更新 Python
 ```
 
+## 环境管理
+
+```sh 查看环境
+conda env list
+```
+
+```sh 创建环境
+conda create -n <env_name> python=<python_version>
+```
+
+```sh 进行环境
+conda activate <env_name>
+```
+
+```sh 导出环境配置
+conda env export > environment.yml
+```
+
+```sh 依据 yml 文件创建环境
+conda env create -f environment.yml
+```
+
+```sh 依据 yml 更新环境
+conda env update -f environment.yml
+```
+
+```sh 复制环境
+conda create -n <env_name_new> --clone <env_name>
+```
+
+```sh 删除环境
+conda remove -n <env_name> --all
+```
+
 ## 中文乱码
 
 使用 Anaconda 进行数据处理后生成图片的时候，如果不指定对应字体会导致中文乱码，可以通过下面的方案进行解决。
@@ -66,7 +101,7 @@ mpl.raParams['axes.unicode_minus'] = False
 
 可以利用 `font_manager` 将所有 matplotlib 能使用的字体打印出来。
 
-``` python
+``` python 查找字体
 from matplotlib import font_manager
 a = sorted([f.name for f in font_manager.fontManager.ttflist])
 for i in a:
@@ -75,7 +110,7 @@ for i in a:
 
 如果 matplotlib 中无中文字体，则需要下载对应的 tff 字体只在到 matplotlib/mpl-data/fonts/tff 中，然后使用 font_manager 重新编译一下。
 
-```python
+```python 重新编译字符管理
 from matplotlib.font_manager import _rebuild
 
 _rebuild()
@@ -83,7 +118,7 @@ _rebuild()
 
 之后就可以利用上面的方法，将使用新的字体了。
 
-```python
+```python 设置字体
 plt.rcParams['font.sans-serif'] = ['STFangsong']
 plt.rcParams['axes.unicode_minus'] = False
 ```

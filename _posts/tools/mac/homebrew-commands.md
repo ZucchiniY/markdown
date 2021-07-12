@@ -9,6 +9,7 @@ description: homebrew 安装配置和国内镜像源的选择。
 abbrlink: 711ab194
 date: 2018-04-27 09:19:00
 update: 2021-06-29 11:12:00
+group: notes
 ---
 
 ## homebrew 安装 

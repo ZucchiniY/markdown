@@ -11,6 +11,7 @@ keywords:
   - surround
 description: Emacs 中使用 Vi 的 surround 插件。
 abbrlink: 3873eb44
+group: notes
 date: 2018-02-12 09:09:00
 ---
 

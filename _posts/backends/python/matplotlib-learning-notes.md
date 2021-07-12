@@ -8,6 +8,7 @@ categories:
 description: matplotlib 常用图标示例。
 abbrlink: c2ad7d73
 date: 2019-07-30 02:38:00
+group: notes
 ---
 
 记录了几个好入的可视化库，学习还是要从基础—— Matplotlib 开始学习。

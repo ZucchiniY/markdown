@@ -9,6 +9,7 @@ categories:
 description: Maven 入门命令与配置。
 abbrlink: 2200c068
 date: 2018-04-18 07:06:00
+group: notes
 ---
 
 ## 创建一个项目 

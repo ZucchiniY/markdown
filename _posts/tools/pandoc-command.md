@@ -10,6 +10,7 @@ categories:
 description: Pandoc 转换文档格式。
 abbrlink: '4032e239'
 date: 2016-01-19 09:08:00
+group: notes
 ---
 
 ## org 转换为 docx 

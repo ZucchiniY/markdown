@@ -9,6 +9,7 @@ top: true
 description: 面向对象设计中的五大基本原则。
 abbrlink: cdbcd916
 date: 2020-03-23 17:03:35
+group: notes
 ---
 
 # Single responsibility principle 单一职责原则

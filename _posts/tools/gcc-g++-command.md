@@ -8,6 +8,8 @@ categories:
   - 工具环境
   - GCC
 abbrlink: a4921194
+group: notes
+description: gcc 编译笔记笔记。
 date: 2015-12-23 02:26:00
 ---
 

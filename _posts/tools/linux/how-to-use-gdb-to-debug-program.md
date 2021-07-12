@@ -8,6 +8,7 @@ categories:
 description: GDB 常用命令笔记。
 abbrlink: efe1991f
 date: 2020-01-08 00:00:00
+group: notes
 ---
 
 GDB 是一个由 GNU 开源组织发布的 *.nix 下的、基于命令行的一款比较知名的程序调试工具。

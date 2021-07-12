@@ -11,6 +11,7 @@ keywords:
 description: 在 MySQL 中分配给用户不同的访问权限。
 abbrlink: '43555396'
 author: zucchini
+group: notes
 date: 2016-04-29 10:55:00
 ---
 

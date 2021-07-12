@@ -11,7 +11,7 @@ keywords:
   - command
   - basis
 description: Git 基础命令整理。
-type: thematics
+group: notes
 abbrlink: c5f0918d
 date: 2016-04-27 07:02:00
 ---

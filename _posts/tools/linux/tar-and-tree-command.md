@@ -9,6 +9,7 @@ categories:
 description: 常用的 tar 和 tree 命令笔记。
 abbrlink: 9d7bc1b0
 date: 2017-03-19 02:04:00
+group: notes
 ---
 
 ## tar 命令

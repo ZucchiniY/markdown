@@ -12,6 +12,7 @@ keywords:
   - org mode
   - emacs
 description: Graphviz Dot 语言来绘制流程图。
+group: notes
 abbrlink: 8ebf9d4
 date: 2016-01-08 07:39:00
 ---

@@ -12,6 +12,7 @@ keywords:
   - hdiutil
 description: 在 Mac 电脑制作 U 盘启动盘。
 abbrlink: 74995ec8
+group: notes
 date: 2018-04-25 02:47:00
 ---
 

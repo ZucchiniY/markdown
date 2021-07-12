@@ -8,6 +8,7 @@ categories:
 description: grep 命令的使用方案和示例。
 abbrlink: a85b713d
 date: 2018-05-31 07:28:00
+group: notes
 ---
 
 ## 简介 

@@ -52,9 +52,42 @@ class PrCreateView(CreateView):
 ## get_queryset()
 
 该方法可以返回一个量身定制的对象列表。可以通过调整返回一个更符合预期的对象列表。
+
+示例如下，主要是按用户进行了一次排序，将排序后的数据，传递给类视图。
+
+```python
+def get_queryset(self):
+    self_objectives = UserObjective.objects.filter(
+        user=self.request.user.user_profile)
+    other_objectives = UserObjective.objects.exclude(
+        user=self.request.user.user_profile)
+    
+    objectives = list(self_objectives) + list(other_objectives)
+    return objectives
+```
+
 ## get_context_data()
 
 适用于给模板传递模型以外内容或者参数，比如增加一个特殊的内容，可以重写该方法来实现。
+
+示例如下，这里是针对传入的 context 又增加了一个 now 的字段：
+
+```python
+def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context['now'] = timezone.now()
+    return context
+   ```
 ## get_object()
 
 通过从 URL 获取根据 pk 或其它参数调取一个对象来进行后续操作，可以通过此方法为对象的内容进行筛选，用此获取更具体的对象。
+
+示例如下，这里是返回此用户有权限的对象，通过这种方式可以控制用户只能查看编辑与自己相关的内容。
+
+```python
+def get_object(self, queryset=None):
+       obj = super().get_object(queryset=queryset)
+       if obj.author != self.request.user:
+              raise Http404()
+       return obj
+```

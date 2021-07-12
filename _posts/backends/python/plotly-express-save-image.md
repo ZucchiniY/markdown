@@ -20,11 +20,11 @@ date: 2021-03-18 16:26:00
 conda install -c conda-forge python-kaleido
 ```
 
-如果是使用的 pip 管理的话，可以使用 `pip install kaleido` 直接安装。
+如果是使用的 pip 管理的话，可以使用 `pip install -U kaleido` 直接安装。
 
-然后在代码中增加下面的代码段：
+同时使用 `fig.write_imgage('xxx.png')` 来保存图片。
 
-``` ptyhon
+``` ptyhon 保存图片
 import plotly.graph_objects as go
 fig = go.Figure()
 fig.write_image("image.png")

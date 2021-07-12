@@ -4,12 +4,11 @@ icons:
   - fas fa-fire red
   - fas fa-star green
 tags:
-  - backtrader
   - 周内效应
-  - python
 categories:
   - 后台技术
   - Python
+  - backtrader
 keywords:
   - 周内效应
   - 基金回测

@@ -5,6 +5,7 @@ tags:
 categories:
   - 后台技术
   - Python
+  - backtrader
 description: 创建一个股票数据库并定期更新数据。
 abbrlink: ed8ff4e7
 date: 2020-10-08 02:06:00

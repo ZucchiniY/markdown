@@ -12,7 +12,6 @@ categories:
 keywords:
   - 周内效应
   - 基金回测
-pin: true
 description: 使用 Backtrader 回测场内指数基金的周内效应。
 headimg: https://cdn.jsdelivr.net/gh/zucchiniy/common@master/cover/quant.jpg
 thumbnail: https://cdn.jsdelivr.net/gh/zucchiniy/common@master/cover/quant.jpg

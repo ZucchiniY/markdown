@@ -2,7 +2,7 @@
 title: "backtrader"
 author: ["夏南瓜"]
 date: 2022-04-14
-lastmod: 2023-01-19T13:29:43+08:00
+lastmod: 2023-01-19T22:38:09+08:00
 series: ["python"]
 tags: ["backtrader", "投资策略"]
 categories: ["Backtrader"]
@@ -665,10 +665,10 @@ cerebro.addobserver(bt.observers.Benchmark, data=benchmark_data, timeframe=bt.Ti
 
 在生成策略的过程中，使用的是 Python 的序列方法直接生成，使用起来比较不友好，今天翻看策略时发现，其实 backtrader 提供对应的方法来生成组合的指标。
 
-self.getdatanames()
+`self.getdatanames()`
 : 按顺序返回所有股票的名称 list
 
-self.getdatabyname(secu_name)
+`self.getdatabyname(secu_name)`
 : 返回该股票的 data
 
 而在生成指标序列的时候，使用字典比序列更方便，代码如下：
